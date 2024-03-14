@@ -1,18 +1,33 @@
 <template>
-  <div >
-    <v-layout >
+  <div>
+    <v-layout>
       <v-app-bar color="#202020">
-        <v-toolbar-title class="logo">SearchMovie</v-toolbar-title> 
+        <v-toolbar-title class="logo">SearchMovie</v-toolbar-title>
         <div class="btns">
-          <v-btn class="btn" icon="home"><span class="material-symbols-outlined">
-            other_houses
-            </span></v-btn>  
-          <v-btn class="btn" icon="mdi-open-in-new"><span class="material-symbols-outlined">
-            bookmark
-            </span></v-btn>  
-          <v-btn class="btn" icon=""><span class="material-symbols-outlined">
-            hotel_class
-            </span></v-btn>
+          <v-hover v-slot="{ isHovering, props }">
+            <v-btn round class="btn" v-bind="props">
+              <v-icon icon="mdi-home"></v-icon>
+              <div v-if="isHovering" class="name_btn">
+                Главная
+              </div>
+            </v-btn>
+          </v-hover>
+          <v-hover v-slot="{ isHovering, props }">
+            <v-btn class="btn" v-bind="props">
+              <v-icon icon="mdi-bookmark"></v-icon>
+              <div v-if="isHovering" class="name_btn">
+                Закладки
+              </div>
+            </v-btn>
+          </v-hover>
+          <v-hover v-slot="{ isHovering, props }">
+            <v-btn class="btn" v-bind="props">
+              <v-icon icon="mdi-star"></v-icon>
+              <div v-if="isHovering" class="name_btn">
+                Оценки
+              </div>
+            </v-btn>
+          </v-hover>
         </div>
       </v-app-bar>
     </v-layout>
@@ -23,28 +38,32 @@
 </script>
 
 <style scoped>
-  .logo{
-      padding: 10;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      color:#21C2F8;
-      font-size: 40px;
-      font-weight: 900;
-      line-height: 1.5;
-  }
-  .btn{
-      margin: 5px;
-      height: 58px;
-      width: 58px;
-      background-color: #21C2F8;
-      border-radius: 90px;
-  }
-  .btn:hover{
-    min-width: 100px;
-  }
-  .material-symbols-outlined{
-    color:#202020;
-    font-size: 36px;
-  }
+.logo {
+  padding: 10;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: #21C2F8;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1.5;
+}
+
+.btn {
+  margin: 5px;
+  width: max-content;
+  background-color: #21C2F8;
+  border-radius: 90px;
+  color: #202020;
+  font-size: 30px;
+}
+
+.btn:hover {
+  width: max-content;
+}
+
+.name_btn {
+  font-size: 20px;
+  font-weight: 900;
+}
 </style>

@@ -1,7 +1,7 @@
 <template>
-  <div class="app">
+  <div>
     <header-menu/> 
-    <search-movie/> 
+    <search-movie/>
   </div>
 </template>
 
@@ -17,10 +17,6 @@ export default {
 </script>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-}
 .app{
   height: 100vh;
   background-color: #2C3E50;

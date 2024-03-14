@@ -1,13 +1,21 @@
 <template>
   <div class="search-movie">
     <div class="search">
-      <v-text-field class="text" placeholder="Введите название фильма..." variant="plain"></v-text-field>
-      <span class="material-symbols-outlined" @click="console.log(2)">
-        search
-      </span>
+      <v-text-field 
+      class="text" 
+      placeholder="Введите название фильма..." 
+      variant="plain" 
+      append-inner-icon="mdi-magnify"
+      @click:append-inner="console.log(1)"></v-text-field>
     </div>
     <div class="select">
-      <v-select :items="items" item-title="name" variant="plain" placeholder="ФИЛЬТР"></v-select>
+      <v-select 
+      clearable
+      :items="items" 
+      item-title="name"
+      variant="plain" 
+      placeholder="ФИЛЬТР"
+      ></v-select>
   </div>
 </div>
     
@@ -41,7 +49,10 @@ data(){
   padding-left: 10px;
 }
 .search {
-  padding: 10px;
+  margin-left: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 5px;
   border-radius: 30px;
   height: 45px;
   width: 700px;
@@ -63,6 +74,7 @@ data(){
   margin-left: 10px;
   padding-right: 0px;
   padding-left: 20px;
+  padding-top: 5px;
   height: 45px;
   min-width: 120px;
   display: flex;
