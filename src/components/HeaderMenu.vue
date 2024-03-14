@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <v-layout>
-      <v-app-bar color="#202020">
+      <v-toolbar class="toolbar">
         <v-toolbar-title class="logo">SearchMovie</v-toolbar-title>
         <div class="btns">
           <v-hover v-slot="{ isHovering, props }">
@@ -29,15 +27,17 @@
             </v-btn>
           </v-hover>
         </div>
-      </v-app-bar>
-    </v-layout>
-  </div>
+      </v-toolbar>
 </template>
 
 <script>
 </script>
 
 <style scoped>
+.toolbar{
+  height: 70px;
+  background-color:#202020;
+}
 .logo {
   padding: 10;
   height: 100%;

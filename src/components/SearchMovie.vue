@@ -40,8 +40,8 @@ export default {
 
 <style scoped>
 .search-movie {
-  margin-top: 120px;
-  margin-left: 74px;
+  margin-top: 45px;
+  margin-left: 75px;
   width: 1000px;
   display: flex;
   font-family: Arial, Helvetica, sans-serif;
@@ -54,7 +54,7 @@ export default {
 
 .search {
   margin-left: 10px;
-  padding-right: 10px;
+  padding-right: 15px;
   padding-left: 10px;
   padding-top: 5px;
   border-radius: 30px;

@@ -1,5 +1,5 @@
 <template>
-  <div style="color:aliceblue">
+  <div>
     123
   </div>
 </template>

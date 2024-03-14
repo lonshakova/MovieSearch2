@@ -1,27 +1,24 @@
 <template>
   <div class="main">
-    <div style="color: white; font-size: 50px">123</div>
     <header-menu/>
     <search-movie/>
+    <card-list/>
   </div>
 </template>
 
 <script>
 import HeaderMenu from '../components/HeaderMenu.vue';
 import SearchMovie from '../components/SearchMovie.vue';
+import CardList from '../components/CardList.vue';
 export default {
   components:{
     HeaderMenu,
-    SearchMovie
+    SearchMovie,
+    CardList
   }
 };
 </script>
 
 <style>
-.main{
-  height: 100vh;
-  background-color: #2C3E50;
-  display: flex;
-  flex-direction: column;
-}
+
 </style>
