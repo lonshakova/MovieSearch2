@@ -4,50 +4,54 @@
       <v-text-field 
       class="text" 
       placeholder="Введите название фильма..." 
-      variant="plain" 
-      append-inner-icon="mdi-magnify"
+      variant="plain"
+      append-inner-icon="mdi-magnify" 
       @click:append-inner="console.log(1)"></v-text-field>
     </div>
     <div class="select">
       <v-select 
-      clearable
+      clearable 
       :items="items" 
       item-title="name"
       variant="plain" 
       placeholder="ФИЛЬТР"
-      ></v-select>
+      style="font-weight:700"
+      color="#202020"></v-select>
+    </div>
   </div>
-</div>
-    
+
 </template>
 
 <script>
 
 export default {
-data(){
-  return {
-    items: [
+  data() {
+    return {
+      items: [
         { value: "title", name: "По названию" },
         { value: "year", name: "По году" },
         { value: "rating", name: "По рейтингу" },
         { value: "timing", name: "По длительности" }
       ],
+    }
   }
-}
 };
 </script>
 
 <style scoped>
-.search-movie{
+.search-movie {
   margin-top: 120px;
   margin-left: 74px;
   width: 1000px;
   display: flex;
   font-family: Arial, Helvetica, sans-serif;
 }
-.text{
+
+.text {
   padding-left: 10px;
+  font-weight: 700;
 }
+
 .search {
   margin-left: 10px;
   padding-right: 10px;

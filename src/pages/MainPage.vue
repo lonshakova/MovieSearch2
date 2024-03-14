@@ -1,13 +1,14 @@
 <template>
-  <div>
-    <header-menu/> 
+  <div class="main">
+    <div style="color: white; font-size: 50px">123</div>
+    <header-menu/>
     <search-movie/>
   </div>
 </template>
 
 <script>
-import HeaderMenu from './components/HeaderMenu.vue';
-import SearchMovie from './components/SearchMovie.vue';
+import HeaderMenu from '../components/HeaderMenu.vue';
+import SearchMovie from '../components/SearchMovie.vue';
 export default {
   components:{
     HeaderMenu,
@@ -17,7 +18,7 @@ export default {
 </script>
 
 <style>
-.app{
+.main{
   height: 100vh;
   background-color: #2C3E50;
   display: flex;
