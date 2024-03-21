@@ -44,7 +44,6 @@ export default {
   margin-left: 75px;
   width: 1000px;
   display: flex;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .text {
