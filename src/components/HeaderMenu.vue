@@ -1,6 +1,6 @@
 <template>
       <v-toolbar class="toolbar">
-        <v-toolbar-title class="logo">SearchMovie</v-toolbar-title>
+        <v-toolbar-title class="logo" @click="$router.push('/')">SearchMovie</v-toolbar-title>
         <div class="btns">
           <v-hover v-slot="{ isHovering, props }">
             <v-btn round class="btn" v-bind="props" @click="$router.push('/')">
@@ -47,6 +47,7 @@
   font-size: 40px;
   font-weight: 900;
   line-height: 1.5;
+  cursor: pointer;
 }
 
 .btn {

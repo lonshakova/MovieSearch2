@@ -7,10 +7,11 @@
     v-bind="props"
     @click="changePage">
       <v-img :src="movie.poster" class="align-end"
-        gradient="to bottom, rgba(0,0,0,0),rgba(0,0,0,0), rgba(0,0,0,.8)" cover height="500">
+        gradient="to bottom, rgba(0,0,0,0),rgba(0,0,0,0.4), rgba(0,0,0,.9)" cover height="500">
         <div class="info">
           <div class="title-and-description">
             <div class="title">{{movie.name}}</div>
+            <div class="year" v-if="isHovering"> 2017 </div>
             <div class="description" v-if="isHovering">Аристократ на коляске нанимает в сиделки бывшего заключенного. Искрометная французская комедия с Омаром Си</div>
           </div>
           
@@ -58,6 +59,7 @@ export default {
   height: 500px;
   border-radius: 25px;
   background-color: #2C3E50;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .v-card:not(.on-hover) {
@@ -80,16 +82,20 @@ export default {
 }
 
 .title{
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 30px;
   font-weight: 100;
 
 }
 
+.year{
+  text-align: center;
+  font-size: 20px;
+  font-weight: 100;
+}
+
 .description{
   margin: 10px;
   text-align: left;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 17px;
   font-weight: 100;
 }
