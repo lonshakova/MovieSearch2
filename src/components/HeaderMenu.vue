@@ -3,7 +3,7 @@
         <v-toolbar-title class="logo">SearchMovie</v-toolbar-title>
         <div class="btns">
           <v-hover v-slot="{ isHovering, props }">
-            <v-btn round class="btn" v-bind="props">
+            <v-btn round class="btn" v-bind="props" @click="$router.push('/')">
               <v-icon icon="mdi-home"></v-icon>
               <div v-if="isHovering" class="name_btn">
                 Главная
@@ -11,7 +11,7 @@
             </v-btn>
           </v-hover>
           <v-hover v-slot="{ isHovering, props }">
-            <v-btn class="btn" v-bind="props">
+            <v-btn class="btn" v-bind="props" @click="$router.push('/bookmarks')">
               <v-icon icon="mdi-bookmark"></v-icon>
               <div v-if="isHovering" class="name_btn">
                 Закладки
@@ -19,7 +19,7 @@
             </v-btn>
           </v-hover>
           <v-hover v-slot="{ isHovering, props }">
-            <v-btn class="btn" v-bind="props">
+            <v-btn class="btn" v-bind="props" @click="$router.push('/ratings')">
               <v-icon icon="mdi-star"></v-icon>
               <div v-if="isHovering" class="name_btn">
                 Оценки

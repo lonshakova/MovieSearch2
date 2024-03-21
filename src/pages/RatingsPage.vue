@@ -1,5 +1,5 @@
 <template>
-  <div class="bookmarks">
+  <div class="marks">
     <header-menu/>
     <search-movie/>
   </div>

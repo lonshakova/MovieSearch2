@@ -1,7 +1,8 @@
 import { createWebHistory, createRouter } from "vue-router";
 import MainPage from "../pages/MainPage.vue";
 import BookmarksPage from "../pages/BookmarksPage.vue";
-import MarksPage from "../pages/MarksPage.vue";
+import RatingsPage from "../pages/RatingsPage.vue";
+import MoviePage from "../pages/MoviePage.vue";
 
 const routes = [
   {
@@ -13,8 +14,12 @@ const routes = [
     component: BookmarksPage
   }, 
   {
-    path: '/marks',
-    component: MarksPage
+    path: '/ratings',
+    component: RatingsPage
+  }, 
+  {
+    path: '/movie',
+    component: MoviePage
   }, 
 ];
 const router = createRouter({
